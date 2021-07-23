@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  height: 50rem;
+  width: 30rem;
+  border: 0.08rem solid black;
+  border-radius: 1rem;
+  background-color: rgb(60, 60, 60);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+  display: grid;
+  gap: 0.1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr repeat(6, 1fr);
+  grid-template-areas:
+    "circles circles circles circles"
+    "display display display display"
+    "clear min percent division"
+    "seven eight nine multi"
+    "four five six subtr"
+    "one two three plus"
+    "nil nil comma equal";
+}
+
+#circles {
+  grid-area: circles;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.circle {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+#red {
+  background-color: lightcoral;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#green {
+  background-color: lightgreen;
+}
+
+#display {
+  grid-area: display;
+  color: white;
+  font-size: 5rem;
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.button {
+  font-size: 2rem;
+  color: white;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:active {
+  opacity: 0.7;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+#btnClr {
+  grid-area: clear;
+}
+
+#btnMin {
+  grid-area: min;
+}
+
+#btnPercent {
+  grid-area: percent;
+}
+
+#btnDivision {
+  font-size: 3rem;
+  grid-area: division;
+}
+
+#btn7 {
+  grid-area: seven;
+}
+
+#btn8 {
+  grid-area: eight;
+}
+
+#btn9 {
+  grid-area: nine;
+}
+
+#btnMultiply {
+  font-size: 3rem;
+  grid-area: multi;
+}
+
+#btn4 {
+  grid-area: four;
+}
+
+#btn5 {
+  grid-area: five;
+}
+
+#btn6 {
+  grid-area: six;
+}
+
+#btnSubtract {
+  font-size: 5rem;
+  grid-area: subtr;
+}
+
+#btn1 {
+  grid-area: one;
+}
+
+#btn2 {
+  grid-area: two;
+}
+
+#btn3 {
+  grid-area: three;
+}
+
+#btnPlus {
+  font-size: 3rem;
+  grid-area: plus;
+}
+
+#btn0 {
+  grid-area: nil;
+  border-bottom-left-radius: 0.9rem;
+}
+
+#btnDecimal {
+  grid-area: comma;
+}
+
+#btnEqual {
+  font-size: 3rem;
+  border-bottom-right-radius: 0.9rem;
+  grid-area: equal;
+}
+
+#btnDivision,
+#btnMultiply,
+#btnSubtract,
+#btnPlus,
+#btnEqual {
+  background-color: orange;
+}
+
+#btnClr,
+#btnMin,
+#btnPercent {
+  background-color: rgb(92, 92, 92);
+}
