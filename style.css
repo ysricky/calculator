@@ -71,8 +71,8 @@ body {
   grid-area: display;
   color: white;
   font-size: 5rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   display: flex;
   justify-content: right;
   align-items: center;
