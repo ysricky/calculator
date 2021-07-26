@@ -45,7 +45,6 @@ buttonNum.forEach((button) => {
           display.textContent = "";
         updateDisplay(button);
       }
-      console.log(tempCalculation);
     } else if (tempCalculation[2].length < 10 && tempCalculation[1] !== "") {
       if (button.textContent === "0" && display.textContent !== "0") {
         updateDisplay(button);
@@ -118,7 +117,7 @@ buttonEqual.addEventListener("click", () => {
       result = result.toFixed(8);
     }
     display.textContent = result;
-    tempCalculation = [result, "", ""];
+    tempCalculation = [result.toString(), "", ""];
     resetDisplay = true;
   }
 });
