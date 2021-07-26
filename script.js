@@ -123,6 +123,7 @@ buttonEqual.addEventListener("click", () => {
 });
 
 buttonDecimal.addEventListener("click", () => {
+  if (resetDisplay) return;
   if (!display.textContent.includes(".")) {
     if (tempCalculation[1] === "") {
       display.textContent += ".";
@@ -164,5 +165,9 @@ function sequentialCalc() {
 }
 
 function showResult(arr) {
-  return mathFunc[arr[1]](Number(arr[0]), Number(arr[2]));
+  if (arr[1] === "/" && Number(arr[2]) === 0) {
+    return (display.textContent = "Err");
+  } else {
+    return mathFunc[arr[1]](Number(arr[0]), Number(arr[2]));
+  }
 }
